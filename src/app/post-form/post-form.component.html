@@ -1,1 +1,17 @@
-<p>post-form works!</p>
+<div class="max-w-3xl p-5 mx-auto bg-gray-100 rounded ">
+  <h1>Creating of post</h1>
+  <form (submit)="createPost()">
+    <div class="my-2">
+      <label for="title">Title</label>
+      <input class="w-full border px-2" type="text" id="title" name="title" [(ngModel)]="title" >
+    </div>
+    <div class="my-2">
+      <label for="description">Description</label>
+      <textarea class="w-full border px-2" id="description" cols="30" name="description" rows="5" [(ngModel)]="description"></textarea>
+    </div>
+
+    <div class="text-right">
+      <button type="submit" class="bg-blue-600 p-2 rounded text-white">Create</button>
+    </div>
+  </form>
+</div>

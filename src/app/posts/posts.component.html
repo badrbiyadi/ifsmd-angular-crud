@@ -1,1 +1,6 @@
-<p>posts works!</p>
+<div class="grid grid-cols-6 gap-2">
+  <div class="p-5 border rounded shadow hover:bg-gray-100 " *ngFor="let post of posts">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.description }}</p>
+  </div>
+</div>

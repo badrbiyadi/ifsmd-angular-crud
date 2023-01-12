@@ -9,6 +9,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { PostsComponent } from './posts/posts.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { FormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,7 +29,8 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
