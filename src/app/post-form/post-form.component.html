@@ -14,4 +14,7 @@
       <button type="submit" class="bg-blue-600 p-2 rounded text-white">{{ (isEdit) ? 'Edit post '+postId : 'Create' }}</button>
     </div>
   </form>
+  <div *ngIf="isEdit">
+    <button class="bg-red-700 text-white rounded p-2" (click)="deletePost()">Delete</button>
+  </div>
 </div>

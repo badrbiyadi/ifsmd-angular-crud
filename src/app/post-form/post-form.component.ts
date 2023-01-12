@@ -55,5 +55,10 @@ export class PostFormComponent implements OnInit {
       this.router.navigate(['posts'])
     }
   }
+  
+  deletePost() {
+    this.postService.deletePost(this.postId)
+    this.router.navigate(['posts'])
+  }
 
 }

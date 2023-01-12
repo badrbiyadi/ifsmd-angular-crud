@@ -32,4 +32,10 @@ export class PostService {
     var foundIndex = this.posts.findIndex(x => x.id == data.id);
     this.posts[foundIndex] = data;
   }
+
+  deletePost(id: number) {
+    this.posts = this.posts.filter(function(item) {
+        return item.id != id
+    })
+  }
 }
