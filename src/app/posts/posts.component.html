@@ -1,6 +1,10 @@
 <div class="grid grid-cols-6 gap-2">
-  <div class="p-5 border rounded shadow hover:bg-gray-100 " *ngFor="let post of posts">
+  <div routerLink="/edit/{{ post.id }}" class="p-5 border rounded shadow cursor-pointer hover:bg-gray-100" *ngFor="let post of posts">
     <h1>{{ post.title }}</h1>
     <p>{{ post.description }}</p>
+
+    <div class="pt-5">
+      <span class="text-sm text-gray-400">Click to edit the post</span>
+    </div>
   </div>
 </div>

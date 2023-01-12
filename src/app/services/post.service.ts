@@ -8,8 +8,8 @@ export class PostService {
 
 
   posts: Post[] = [
-    {title: "First post", description: "This is a description"},
-    {title: "Second post", description: "This is a description"},
+    {id: 1 ,title: "First post", description: "This is a description"},
+    {id: 2, title: "Second post", description: "This is a description"},
   ]
 
   constructor() { }
@@ -18,7 +18,18 @@ export class PostService {
     return this.posts;
   }
 
-  storePost(data: Post) {
+  getPost(id:number) {
+    var foundIndex = this.posts.findIndex(x => x.id == id);
+    return this.posts[foundIndex]
+  }
+
+  storePost(data: any) {
+    data.id = this.posts.length+1
     this.posts.push(data);
+  }
+
+  editPost(data: Post) {
+    var foundIndex = this.posts.findIndex(x => x.id == data.id);
+    this.posts[foundIndex] = data;
   }
 }
